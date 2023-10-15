@@ -1,0 +1,418 @@
+
+html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0; padding: 0;
+    vertical-align: baseline;
+    border-collapse: collapse;
+    border-spacing: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+*::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* body */
+
+/* header */
+div.headerWrap {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    background-color: #3176ff;
+    z-index: 2000;
+}
+header {
+    width: 1180px;
+    height: 100px;
+    margin: 0 auto;
+    text-align: right;
+}
+/* --logo */
+p.logo {
+    float: left;
+    width: 300px;
+    height: 100%;
+}
+p.logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/logo/logo3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* --nva */
+nav {
+    width: 600px;
+    display: inline-block;
+}
+nav li.navTitle {
+    float: left;
+    width: 25%;
+    text-align: center;
+    line-height: 100px;
+    font-family: "NanumBarunGothic";
+}
+nav li.navTitle a:hover {
+    text-decoration: underline;
+}
+div.navWrap a:hover {
+    color: #3176ff;
+}
+li.navTitle > a {
+    color: #fff;
+}
+nav li.navTitle a.hasColor {
+    color: #fff;
+    text-decoration: underline;
+}
+/* -/-navCont */
+div.navWrap {
+    visibility: hidden;
+    opacity : 0;
+    top: 70%;
+    transition : 0.5s ease-in-out;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    position: absolute;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 300;
+}
+li.navTitle:hover div.navWrap {
+    top: 100%;
+    visibility: visible;
+    opacity: 1;
+    border-top: 1px solid #ddd;
+}
+div.navContents {
+    width: 1180px;
+    margin: 0 auto;
+    display: table;
+}
+div.navCont {
+    width: 25%;
+    display: table-cell;
+}
+div.navCont ul li {
+    line-height: 50px;
+    font-size: 15px;
+}
+div.navCont ul li.navContTitle {
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+/* brandIntro */
+/* --//intro */
+div.brandIntro {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+div.intro {
+    height: 100vh;
+    background-image: url(../images/index/index0.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    margin-bottom: 50px;
+}
+div.intro h1 {
+    width: 1440px;
+    color: #fff;
+    font-size: 60px;
+    position: absolute;
+    top: 10%;
+    left: 18%;
+    opacity: 0;
+    animation: h1 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes h1 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+div.intro ul {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    display: table;
+    height: auto;
+    margin-left: -720px;
+}
+div.intro li {
+    float: left;
+    width: 380px;
+    height: 380px;
+    margin: 0 40px;
+    text-align: center;
+    border-radius: 50%;
+    opacity: 0;
+}
+div.intro li:nth-child(1) {
+    background-image: url(../images/index/index-intro1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y:  40%;
+    background-color: #fff;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-name: intro;
+}
+div.intro li:nth-child(2) {
+    background-image: url(../images/index/index-intro2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y:  40%;
+    background-color: #fff;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    animation-name: intro;
+}
+div.intro li:nth-child(3) {
+    background-image: url(../images/index/index-intro3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y:  40%;
+    background-color: #fff;
+    animation-duration: 1s;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+    animation-name: intro;
+}
+@keyframes intro {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.8;
+    }
+}
+div.intro p {
+    font-size: 18px;
+    font-weight: bold;
+    position: relative ;
+    top: 60%;
+}
+/* --sliderWrap */
+div.sliderWrap {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+li.slide {
+    width: 100%;
+    height: 900px;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+li.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* brandCont */
+div.brandText {
+    position: absolute;
+    top: 10%;
+    left: 0;
+}
+div.brandText p.brandTitle {
+    font-family: "Tmon몬소리 Black";
+    font-size: 100px;
+    font-weight: bold;
+}
+/* --//text1 */
+div.cont1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-image: url(../images/slider/slider-2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+div.brandText p.bt1 {
+    color: #123d76;
+    margin-bottom: 40px;
+}
+div.text1 div {
+    margin-bottom: 60px;
+}
+div.text1 div p {
+    font-size: 17px;
+    line-height: 17px;
+    color: #6b7684;
+    margin-bottom: 10px;
+}
+div.text1 div p:first-child {
+    font-size: 19px;
+    font-weight: bold;
+    color: #333d4b;
+    margin-bottom: 20px;
+}
+/* --//text2 */
+div.cont2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-image: url(../images/slider/slider-3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+div.brandText p.bt2 {
+    color: #2d76dc;
+    margin-bottom: 40px;
+}
+div.text2 div {
+    margin-bottom: 60px;
+}
+div.text2 div p {
+    font-size: 17px;
+    line-height: 17px;
+    color: #6b7684;
+    margin-bottom: 10px;
+}
+div.text2 div p:first-child {
+    font-size: 19px;
+    font-weight: bold;
+    color: #333d4b;
+    margin-bottom: 20px;
+}
+/* --//text3 */
+div.cont3 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-image: url(../images/slider/slider-4.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+div.brandText p.bt3 {
+    color: #2399a5;
+    margin-bottom: 40px;
+}
+div.text3 div {
+    margin-bottom: 60px;
+}
+div.text3 div p {
+    font-size: 17px;
+    line-height: 17px;
+    color: #6b7684;
+    margin-bottom: 10px;
+}
+div.text3 div p:first-child {
+    font-size: 19px;
+    font-weight: bold;
+    color: #333d4b;
+    margin-bottom: 20px;
+}
+/* --button */
+button {
+    width: 70px;
+    height: 120px;
+    margin: 0 20px;
+    position: absolute;
+    top: 50%;
+    transition: 0.5s ease;
+    background: none    ;
+    border: none;
+    border-radius: 10px;
+}
+button:hover {
+    background-color: #aaa;
+}
+button.next {
+    right: 0;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    height: auto;
+    background-color: #eee;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+div.footerContents {
+    position: relative;
+    width: 1180px;
+    height: 100%;
+    margin: 60px auto 0;
+    padding-top: 40px;
+}
+div.righter {
+    width: auto;
+    height: 100%;
+    display: inline-block;
+}
+ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+footer li {
+    float: left;
+    padding: 0 10px;
+    border-right: 1px solid #111;
+}
+footer li:last-child {
+    border: none;
+}
+div.footerContInfo {
+    padding: 30px 10px 0;
+}
+div.footerContents p {
+    margin-bottom: 10px;
+    color: #111;
+}
+div.lefter {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+div.lefter p {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+div.lefter p img {
+    width: 100%;
+    height: 100%;
+}
+

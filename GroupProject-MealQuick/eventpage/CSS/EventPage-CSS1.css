@@ -1,0 +1,362 @@
+@charset "utf-8";
+*{
+    margin: 0; padding: 0;
+    vertical-align: baseline;
+    font-family: 'Noto Sans KR';
+    font-size: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    box-sizing: border-box;
+}
+li { list-style: none; }
+ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+a { text-decoration: none;}
+
+/* Web화면 */
+@media screen and (min-width:1200px){
+    /* body */
+    /* banner */
+    div.Banner {
+        width: 100%;
+        height: 250px;
+        padding: 68px;
+        background-image: 
+        url(../images/banner/Banner.png);
+        background-position: center;
+        background-size: cover;
+    }
+    div.Banner h1 {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        line-height: 80px;
+        font-size: 50px;
+        color: #333;
+    }
+    div.Banner p {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 20px;
+        font-family: '나눔고딕';
+        color: #333;
+    }
+    
+    /* main contents nav*/
+    div.PageGuid {
+        width: 600px;
+        height: 160px;
+        margin: 0 auto;
+    }
+    div.PageGuid li {
+        float: left;
+    }
+    div.PageGuid a {
+        display: inline-block;
+        width: 150px;
+        height: 100%;
+        margin: 0 25px;
+        font-size: 25px;
+        font-weight: bold;
+        color: rgb(134, 134, 134);
+        text-align: center;
+        line-height: 160px;
+    }
+    div.PageGuid a.OnPage {
+        color: #9f1111;
+        text-decoration: underline;
+    }
+
+    /* Main contents Link-image */
+    section.MainContents {
+        width: 98%;
+        max-width: 1200px;
+        height: auto;
+        margin: 0 auto;
+    }
+    section.MainContents ul {
+        border-top: 2px solid #9f1111;
+    }
+    section.MainContents li {
+        height: 175px;
+        padding: 20px 0;
+        border-bottom: 1px solid #d9d9d9;
+    }
+    section.MainContents img {
+        width: 44%;
+        height: 100%;
+    }
+    section.MainContents div {
+        display: inline-block;
+        width: 44%;
+        vertical-align: top;
+        padding: 0 40px;
+    }
+    section.MainContents div p:nth-child(1) {
+        font-size: 20px;
+        font-weight: bold   ;
+    }
+    section.MainContents div p:nth-child(2) {
+        font-size: 15px;
+        padding-top: 3px;
+        color: #898989;
+    }
+    section.MainContents div p:nth-child(2) span {
+        color: #9f1111;
+        font-weight: 500;
+    }
+    section.MainContents li span:nth-child(3) {
+        width: 100px;
+        line-height: 35px;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        color: #fff;
+        background-color: #9f1111;
+        border-radius: 20px;
+    }
+    section.MainContents li span.End {
+        background-color: #898989;  
+    }
+
+    /* PageGuide */
+    div.PageGuide{ 
+        height: 30px;
+        margin: 80px auto;
+        text-align: center;
+    }
+    div.PageGuide li { 
+        display: inline-block;
+        margin: 0 10px;
+    }
+    div.PageGuide a{ 
+        color: #333;
+        vertical-align: middle;
+    }
+    div.PageGuide a.FirstPage  { 
+        font-weight: bold;
+        color: #9f1111;
+    } 
+}
+
+/* Mobil,Tablet 화면 베너 */
+
+@media screen and (min-width:601px) and (max-width:1199px){
+    /* body */
+    /* banner */
+    div.Banner {
+        width: 100%;
+        height: 250px;
+        padding: 68px;
+        background-image: 
+        url(../images/banner/Banner.png);
+        background-position: center;
+        background-size: cover;
+    }
+    div.Banner h1 {
+        width: 100%;
+        line-height: 80px;
+        font-size: 50px;
+        color: #333;
+    }
+    div.Banner p {
+        width: 100%;
+        line-height: 20px;
+        font-family: '나눔고딕';
+        color: #333;
+    }
+
+    /* main contents nav*/
+    div.PageGuid {
+        width: 80%;
+        height: 71px;
+        margin: 0 auto;
+    }
+    div.PageGuid li {
+        width: 33.3%;
+        margin: 0 auto;
+        float: left;
+    }
+    div.PageGuid a {
+        display: block;
+        width: 70%;
+        height: 100%;
+        margin: 0 auto;
+        font-size: 16px;
+        font-weight: bold;
+        color: rgb(134, 134, 134);
+        text-align: center;
+        line-height: 71px;
+    }
+    div.PageGuid a.OnPage {
+        color: #9f1111;
+        text-decoration: underline;
+    }
+}
+/* Mobil,Tablet 컨텐츠 */
+@media screen and (max-width:1199px){
+    /* Main contents Link-image */
+    section.MainContents {
+        width: 98%;
+        height: auto;
+        margin: 0 auto;
+    }
+    section.MainContents ul {
+        border-top: 2px solid #9f1111;
+    }
+    section.MainContents li {
+        padding: 20px 0;
+        border-bottom: 1px solid #d9d9d9;
+    }
+    section.MainContents li img {
+        width: 100%;
+        height: auto;
+    }
+    section.MainContents div {
+        display: block;
+        margin-bottom: 20px;
+    }
+    section.MainContents div p:nth-child(1) {
+        font-size: 20px;
+        font-weight: bold   ;
+    }
+    section.MainContents div p:nth-child(2) {
+        font-size: 15px;
+        padding-top: 3px;
+        color: #898989;
+    }
+    section.MainContents div p:nth-child(2) span {
+        color: #9f1111;
+        font-weight: 500;
+    }
+    section.MainContents li span:nth-child(3) {
+        width: 80px;
+        line-height: 35px;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        color: #fff;
+        background-color: #9f1111;
+        border-radius: 20px;
+    }
+    section.MainContents li span.End {
+        background-color: #898989;  
+    }
+
+
+    /* PageGuide */
+    div.PageGuide{ 
+        height: 30px;
+        margin: 40px auto;
+        text-align: center;
+    }
+    div.PageGuide li { 
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    div.PageGuide a{ 
+        color: #333;
+        vertical-align: middle;
+    }
+    div.PageGuide a.FirstPage  { 
+        font-weight: bold;
+        color: #9f1111;
+    } 
+}
+
+/* Mobil 화면 베너 */
+@media screen and (max-width:600px){
+    /* body */
+    /* banner */
+    div.Banner {
+        width: 100%;
+        height: 120px;
+        background-image: 
+        url(../images/banner/Banner.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    div.Banner h1 {
+        width: 100%;
+        height: 120px;
+        line-height: 120px;
+        text-align: center;
+        font-size: 25px;
+        color: #333;
+    }
+    div.Banner p {
+        display: none;
+        width: 1200px;
+        height: 20px;
+        font-family: '나눔고딕';
+        color: #333;
+    }
+
+    /* main contents nav*/
+    div.PageGuid {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+    div.PageGuid li {
+        width: 40%;
+        margin: 0 auto;
+    }
+    div.PageGuid a {
+        display: block;
+        width: 100%;
+        font-size: 100%;
+        font-weight: bold;
+        color: rgb(134, 134, 134);
+        text-align: center;
+        line-height: 2;
+    }
+    div.PageGuid a.OnPage {
+        color: #9f1111;
+        text-decoration: underline;
+    }
+
+    /* maincontents link-img */
+    section.MainContents li {
+        margin: 10px 0;
+        padding: 0;
+        border-bottom: 1px solid #d9d9d9;
+    }
+    section.MainContents div {
+        display: block;
+        margin-bottom: 20px;
+    }
+    section.MainContents div p:nth-child(1) {
+        font-size: 15px;
+        font-weight: bold   ;
+    }
+    section.MainContents div p:nth-child(2) {
+        font-size: 12px;
+        padding-top: 3px;
+        color: #898989;
+    }
+    section.MainContents div p:nth-child(2) span {
+        color: #9f1111;
+        font-weight: 500;
+    }
+    section.MainContents li span:nth-child(3) {
+        width: 50px;
+        line-height: 20px;
+        font-size: 12px;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        color: #fff;
+        background-color: #9f1111;
+        border-radius: 20px;
+    }
+    section.MainContents li span.End {
+        background-color: #898989;  
+    }
+
+}

@@ -1,0 +1,405 @@
+@charset "utf-8";
+* { 
+    margin: 0; padding: 0;
+    vertical-align: baseline;
+    font-family: 'Noto Sans KR';
+    font-size: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100%;
+}
+li { list-style: none;}
+ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+a { text-decoration: none; }
+.hid { 
+    font-size: 0;
+    overflow: hidden;
+}
+/* Web 화면 */
+@media screen and (min-width:1200px){
+    /* body */
+    /* banner */
+    div.Banner {
+        width: 100%;
+        height: 250px;
+        padding: 68px;
+        background-image: 
+        url(../images/banner/Banner.png);
+        background-position: center;
+        background-size: cover;
+    }
+    div.Banner h1 {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        line-height: 80px;
+        font-size: 50px;
+        color: #333;
+    }
+    div.Banner p {
+        width: 100%;
+        max-width: 1200px;
+        height: 20px;
+        margin: 0 auto;
+        font-family: '나눔고딕';
+        color: #333;
+    }
+    /* main contents nav*/
+    div.PageGuid {
+        width: 600px;
+        height: 160px;
+        margin: 0 auto;
+    }
+    div.PageGuid li {
+        float: left;
+    }
+    div.PageGuid a {
+        display: inline-block;
+        width: 150px;
+        height: 100%;
+        margin: 0 25px;
+        font-size: 25px;
+        font-weight: bold;
+        color: rgb(134, 134, 134);
+        text-align: center;
+        line-height: 160px;
+    }
+    div.PageGuid a.OnPage {
+        color: #9f1111;
+        text-decoration: underline;
+    }
+    /* Main contents Link-img */
+    div.MainContents {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    section.EventTop ul {
+        width: 100%;
+        height: 400px;
+    }
+    section.EventTop li {
+        float: left;
+        margin: 0 10px;
+    }
+    section.EventBottom ul {
+        width: 100%;
+        height: 400px;
+    }
+    section.EventBottom li {
+        float: left;
+        margin: 0 10px;
+    }
+    /* .EventTop */
+    section.EventTop div p:nth-child(1) {
+        width: 40px;
+        height: 24px;
+        color: #fff;
+        line-height: 24px;
+        text-align: center;
+        border-radius: 7px;
+        background-color: #9f1111;
+    }
+    section.EventTop div p:nth-child(2) {
+        font-weight: bold;
+    }
+    section.EventTop div p:nth-child(3) {
+        font-size: 17px;
+        font-weight: bold;
+    }
+    section.EventTop div p:nth-child(4) {
+        color: rgb(110, 110, 153);
+    }
+    /* .EventBottom */
+    section.EventBottom div p:nth-child(1) {
+        font-weight: bold
+    }
+    section.EventBottom div p:nth-child(2) {
+        font-size: 17px;
+        font-weight: bold;
+    }
+    section.EventBottom div p:nth-child(3) {
+        color: rgb(110, 110, 110);
+    }
+
+    /* PageGuide */
+    div.PageGuide{ 
+        height: 30px;
+        margin: 0 auto 80px;
+        text-align: center;
+    }
+    div.PageGuide li { 
+        display: inline-block;
+        margin: 0 10px;
+    }
+    div.PageGuide a{ 
+        color: #333;
+        vertical-align: middle;
+    }
+    div.PageGuide a.FirstPage  { 
+        font-weight: bold;
+        color: #9f1111;
+    } 
+}
+/* Tablet 화면 */
+@media screen and (min-width:601px) and (max-width:1199px){
+    /* body */
+    /* banner */
+    div.Banner {
+        width: 100%;
+        height: 250px;
+        padding: 68px;
+        background-image: 
+        url(../images/banner/Banner.png);
+        background-position: center;
+        background-size: cover;
+    }
+    div.Banner h1 {
+        width: 100%;
+        line-height: 80px;
+        font-size: 50px;
+        color: #333;
+    }
+    div.Banner p {
+        width: 100%;
+        line-height: 20px;
+        font-family: '나눔고딕';
+        color: #333;
+    }
+
+    /* main contents nav*/
+    div.PageGuid {
+        width: 80%;
+        height: 71px;
+        margin: 0 auto;
+    }
+    div.PageGuid li {
+        width: 33.3%;
+        margin: 0 auto;
+        float: left;
+    }
+    div.MainContents li::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    div.MainContents li::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    div.PageGuid a {
+        display: block;
+        width: 70%;
+        height: 100%;
+        margin: 0 auto;
+        font-size: 16px;
+        font-weight: bold;
+        color: rgb(134, 134, 134);
+        text-align: center;
+        line-height: 71px;
+    }
+    div.PageGuid a.OnPage {
+        color: #9f1111;
+        text-decoration: underline;
+    }
+
+    /* Main contents Link-img */
+    div.MainContents {
+        width: 100%;
+        height: auto;
+    }
+    div.MainContents li {
+        float: left;
+        width: 32%;
+        margin: 0.65%;
+    }
+    div.MainContents ul::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    div.MainContents li img {
+        width: 100%;
+    }
+    section.EventTop div p:nth-child(1) {
+        width: 36px;
+        height: 20px;
+        font-size: 12px;
+        color: #fff;
+        line-height: 20px;
+        text-align: center;
+        border-radius: 7px;
+        background-color: #9f1111;
+    }
+    section.EventTop div p:nth-child(2) {
+        font-size: 15px;
+        font-weight: bold;
+    }
+    section.EventTop div p:nth-child(3) {
+        font-size: 15px;
+        font-weight: bold;
+    }
+    section.EventTop div p:nth-child(4) {
+        font-size: 12px;
+        color: rgb(110, 110, 153);
+    }
+    /* .EventBottom */
+    section.EventBottom div p:nth-child(1) {
+        font-size: 15px;
+        font-weight: bold
+    }
+    section.EventBottom div p:nth-child(2) {
+        font-size: 15px;
+        font-weight: bold;
+    }
+    section.EventBottom div p:nth-child(3) {
+        font-size: 12px;
+        color: rgb(110, 110, 110);
+    }
+
+    /* PageGuide */
+    div.PageGuide{ 
+        height: 30px;
+        margin: 40px auto;
+        text-align: center;
+    }
+    div.PageGuide li { 
+        display: inline-block;
+        margin: 0 10px;
+    }
+    div.PageGuide a{ 
+        color: #333;
+        vertical-align: middle;
+    }
+    div.PageGuide a.FirstPage  { 
+        font-weight: bold;
+        color: #9f1111;
+    } 
+}
+
+/* Mobile 화면 */
+@media screen and (max-width:600px){
+    /* body */
+    /* banner */
+    div.Banner {
+        width: 100%;
+        height: 120px;
+        background-image: 
+        url(../images/banner/Banner.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    div.Banner h1 {
+        width: 100%;
+        height: 120px;
+        line-height: 120px;
+        text-align: center;
+        font-size: 25px;
+        color: #333;
+    }
+    div.Banner p {
+        display: none;
+        width: 1200px;
+        height: 20px;
+        font-family: '나눔고딕';
+        color: #333;
+    }
+
+    /* main contents nav*/
+    div.PageGuid {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+    div.PageGuid li {
+        width: 40%;
+        margin: 0 auto;
+    }
+    div.PageGuid a {
+        display: block;
+        width: 100%;
+        font-size: 100%;
+        font-weight: bold;
+        color: rgb(134, 134, 134);
+        text-align: center;
+        line-height: 2;
+    }
+    div.PageGuid a.OnPage {
+        color: #9f1111;
+        text-decoration: underline;
+    }
+
+    /* Main contents Link-img */
+    div.MainContents {
+        
+        margin: 0 2.5%;
+    }
+    div.MainContents li {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #dfdfdf;
+    }
+    div.MainContents img {
+        width: 100%;
+    }
+    /* EventTop */
+    section.EventTop div p:nth-child(1) {
+        width: 36px;
+        height: 20px;
+        color: #fff;
+        font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+        border-radius: 7px;
+        background-color: #9f1111;
+    }
+    section.EventTop div p:nth-child(2) {
+        font-weight: bold;
+    }
+    section.EventTop div p:nth-child(3) {
+        font-weight: bold;
+    }
+    section.EventTop div p:nth-child(4) {
+        font-size: 12px;
+        color: rgb(110, 110, 153);
+    }
+
+    /* .EventBottom */
+    section.EventBottom div p:nth-child(1) {
+        font-weight: bold
+    }
+    section.EventBottom div p:nth-child(2) {
+        font-weight: bold;
+    }
+    section.EventBottom div p:nth-child(3) {
+        font-size: 12px;
+        color: rgb(110, 110, 110);
+    }
+
+    /* PageGuide */
+    div.PageGuide{ 
+        height: 30px;
+        margin: 40px auto;
+        text-align: center;
+    }
+    div.PageGuide li { 
+        display: inline-block;
+        margin: 0 10px;
+    }
+    div.PageGuide a{ 
+        color: #333;
+        vertical-align: middle;
+    }
+    div.PageGuide a.FirstPage  { 
+        font-weight: bold;
+        color: #9f1111;
+    } 
+}
